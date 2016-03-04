@@ -1,0 +1,202 @@
+/*Color scheme
+*/
+@font-face {
+	font-family: "Toms Handwritten";
+	src: url('fonts/toms_handwritten.eot');
+	src: local('☺'), url('../fonts/toms_handwritten.eot?#iefix') format('embedded-opentype'), 
+					 url('../fonts/toms_handwritten.woff') format('woff'),
+					 url('../fonts/toms_handwritten.woff2') format('woff2'), 
+					 url('../fonts/toms_handwritten.ttf') format('truetype'),
+					 url('../fonts/toms_handwritten.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*{
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+html {
+	font-size: 10px;
+	font-family: sans-serif;
+	/*position: relative;*/
+	min-height: 100%;
+}
+body {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.42857143;
+	background: url("../images/bg.jpg");
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -40px;
+}
+.push {
+	height: 40px;
+}
+@media (max-width: 767px) {
+            body {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+    
+            .footer{
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+}
+.content-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	/*padding-top: -40px;*/
+}
+.content-wrapper, .footer-container{
+	min-width: 960px;
+}
+.footer {
+	background-color: rgba(0, 0, 0, 0.3);
+	color: rgba(255,255,255,0.75);
+	font-size: 14px;
+	line-height: 40px;
+}
+.navbar {
+	font-size: 21px;
+	min-height: 45px;
+	margin-bottom: 0;
+	padding-top: 6px;
+	border-radius: 0;
+	position: relative;
+	background-color: rgba(26, 26, 26, 0.95);
+	border-bottom: 3px solid #6DB81C;
+}
+.nav {
+	padding-left: 0;
+	margin-bottom: 0;
+}
+.pinboard-title {
+	background: url("../images/logo.png");
+	width: 116px;
+	height: 118px;
+	transform: scale(0.3);
+	float: left;
+	margin-top: -3.5%;
+	margin-bottom: -3%;
+}
+.navbar-left-title a, .navbar-left-title a:hover,
+.navbar-left-title a:visited, .navbar-left-title a:focus {
+	display: inline-block;
+	float: left;
+	color: #FA961E;
+	text-decoration: none;
+	font-family: "Toms Handwritten",Helvetica,Arial,sans-serif;
+	font-size: 150%;
+	letter-spacing: 3px;
+}
+.navbar-right {
+	color: rgba(255, 255, 255, 0.75);
+	padding-right: 10px;
+	min-width: 600px;
+}
+@media(min-width: 768px){
+	.navbar-right {
+		float: right !important;
+	}
+}
+.text {
+	font-family: "Toms Handwritten",Helvetica,Arial,sans-serif;
+	letter-spacing: 5px;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: -2px -2px 0 hsl(20, 91%, 57%),
+             	-3px -3px 1px hsl(20, 91%, 57%);
+}
+.text-big{
+	font-size: 11em;
+	line-height: 0;
+	text-shadow: -4px -4px 0 hsl(20, 91%, 57%),
+             	-5px -5px 1px hsl(20, 91%, 57%);
+}
+.text-medium {
+	font-size: 5em;
+	line-height: 2;
+}
+.text-small	{
+	font-size: 3em;	
+}
+.text-center {
+	text-align: center;
+}
+.buttons-main-content {
+	line-height: 1;
+	margin-top: 12%;
+}
+.buttons-main-content a:first-of-type{
+	float: left;
+	margin-left: 10%;
+}
+.buttons-main-content a:last-of-type{
+	float: right;
+	margin-right: 10%;
+}
+.buttons-main-content a{
+	color: #ffffff;
+	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
+	border-radius: 20px 0px 20px 0px;
+	-moz-border-radius: 20px 0px 20px 0px;
+	-webkit-border-radius: 20px 0px 20px 0px;
+	border: 3px solid #ffffff;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 2% 8% 1% 8%;
+	letter-spacing: 4px;
+	text-decoration: none;
+	transition: background-color .3s linear;
+}
+.buttons-main-content a:hover {
+	background: #6DB81C;
+	border: 3px solid #6DB81C;
+	text-decoration: none;
+}
+.letter-right {
+	background: url("../images/letter.png") no-repeat;
+	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
+	transform: rotate(2deg);
+	float: right;
+	width: 87%;
+	margin-top: 5%;
+	padding: 6% 4%;
+	letter-spacing: 2px;
+}
+.letter-right h3 {
+	font-size: 3.5em;
+}
+.letter-right h4 {
+	font-size: 3em;
+	text-decoration: underline;
+}
+.letter-right p {
+	font-size: 2em;
+	padding-left: 2%;
+	
+}
+/*
+.wrapper {
+	position: relative;
+	z-index: 10;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -40px;
+}
+.content-wrapper{
+	width: 100%;
+	padding-top: -40px;
+}
+
+
+
+
