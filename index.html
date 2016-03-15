@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pinboard | Welcome</title>
+	<link href="images/favicon.png" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -44,22 +45,77 @@
 							<h2 class="text text-small">...and you will never forget your tasks!..</h2>
 						</div>
 						<div class="buttons-main-content text-center">
-							<a href="#">Sign in</a>
-							<a href="#">Register</a>
+							<a href="#" data-toggle="modal" data-target="#signIn">Sign in</a>
+							<div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="smodal-title" id="signInModalLabel">Sign in to Pinboard</h4>
+										</div>
+									<div class="modal-body">
+										<div class="modal-body-center">
+											<label for="login-field">Username or e-mail address</label><br>
+
+											<input type="text" id="login-field" class="input-block" autofocus="		autofocus" name="login" autocapitalize="off" autocorrect="off"><br>
+
+											<label for="password-field">Password</label><br>
+
+											<input type="password" id="password-field" class="input-block" name="password" autocapitalize="off" autocorrect="off"><br>
+
+											<input type="checkbox" checked id="remember">
+
+											<label for="remember">Remember me</label><br>
+										</div>	
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-success btn-green">Sign in</button>
+									</div>
+								</div>
+							</div>
+						</div>
+							<a href="#" data-toggle="modal" data-target="#register">Register</a>
+							<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="smodal-title" id="registerModalLabel">Register to Pinboard</h4>
+										</div>
+									<div class="modal-body">
+										<div class="modal-body-center">
+											<label for="username-field">Username</label><br>
+
+											<input type="text" id="username-field" class="input-block" autofocus="autofocus" name="username" autocapitalize="off" autocorrect="off"><br>
+
+											<label for="email-field">E-mail</label><br>
+
+											<input type="email" id="email-field" class="input-block" name="email" autocapitalize="off" autocorrect="off"><br>
+
+											<label for="password-field">Password</label><br>
+
+											<input type="password" id="password-field" class="input-block" name="password" autocapitalize="off" autocorrect="off"><br>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-success btn-green">Register</button>
+									</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 						<div class="letter-right">
-							<h3 class="text-center">[Skip List] Change Add to Skip List window</h3>
+							<h3 class="text-center">Functions and features</h3>
 							<h4>Details:</h4>
-							<p>Type:Improvement</p>
-							<p>Status:Closed(View Workflow)</p>
-							<p>Priority:Normal</p>
-							<p>Resolution:Fixed</p>
-							<p>Affects Version/s:None</p> 
-							<p>Fix Version/s:IRK</p> 
-							<p>Component/s:Skip list, Viewer</p>
-    						<p>Labels:None</p>   
+							<p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Creating personal notes</p>
+							<p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Editing notes</p>
+							<p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Deleting notes</p>
+							<p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Viewing notes</p> 
+							<p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Customizing your pinboard view</p>
+							<p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Customizing your notes view</p> 
+							<p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Changing notes grids</p>
 						</div>
 					</div>	
 				</div>

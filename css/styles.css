@@ -1,5 +1,3 @@
-/*Color scheme
-*/
 @font-face {
 	font-family: "Toms Handwritten";
 	src: url('fonts/toms_handwritten.eot');
@@ -155,6 +153,7 @@ body {
 	letter-spacing: 4px;
 	text-decoration: none;
 	transition: background-color .3s linear;
+	outline: none;
 }
 .buttons-main-content a:hover {
 	background: #6DB81C;
@@ -183,20 +182,42 @@ body {
 	padding-left: 2%;
 	
 }
-/*
-.wrapper {
-	position: relative;
-	z-index: 10;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -40px;
+/*Modals at welcome screen*/
+.modal-body-center {
+	width: 90%;
+	display: inline-block;
+  	vertical-align: middle;
 }
-.content-wrapper{
-	width: 100%;
-	padding-top: -40px;
+.input-block {
+	display: block;
+	margin: 0 0 15px 0;
+	width: 65%;
 }
-
-
-
-
+input[type="text"], input[type="password"], input[type="email"] {
+	min-height: 35px;
+	padding: 7px 8px;
+	font-size: 13px;
+	color: #333;
+	vertical-align: middle;
+	border-radius: 3px;
+	background: #fff;
+	border: 1px solid #ccc;
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+	border-color: #6DB81C;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),0 0 5px rgba(83, 185, 52, 0.5);
+}
+label[for="login-field"], label[for="password-field"],
+label[for="username-field"], label[for="email-field"]{
+	display: block;
+	text-align: left;
+	margin-bottom: 0;
+}
+.btn {
+	padding: 6px 18px;
+}
+.btn-success {
+	margin-right: 5%;
+}
