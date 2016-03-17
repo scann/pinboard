@@ -37,24 +37,13 @@ body {
 .push {
 	height: 40px;
 }
-@media (max-width: 767px) {
-            body {
-                padding-right: 0px;
-                padding-left: 0px;
-            }
-    
-            .footer{
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-}
 .content-wrapper {
 	width: 100%;
 	margin: 0 auto;
 	/*padding-top: -40px;*/
 }
 .content-wrapper, .footer-container{
-	min-width: 960px;
+	min-width: 320px;
 }
 .footer {
 	background-color: rgba(0, 0, 0, 0.3);
@@ -94,16 +83,12 @@ body {
 	font-family: "Toms Handwritten",Helvetica,Arial,sans-serif;
 	font-size: 150%;
 	letter-spacing: 3px;
+	line-height: 1.5;
 }
 .navbar-right {
 	color: rgba(255, 255, 255, 0.75);
 	padding-right: 10px;
 	min-width: 600px;
-}
-@media(min-width: 768px){
-	.navbar-right {
-		float: right !important;
-	}
 }
 .text {
 	font-family: "Toms Handwritten",Helvetica,Arial,sans-serif;
@@ -220,4 +205,104 @@ label[for="username-field"], label[for="email-field"]{
 }
 .btn-success {
 	margin-right: 5%;
+}
+/*Media queries*/
+@media(min-width: 1200px){
+	.navbar-left-title a, .navbar-left-title a:hover,
+	.navbar-left-title a:visited, .navbar-left-title a:focus {
+	line-height: 1.5;
+	margin-left: -1.5%;
+	}
+	.letter-right h3 {
+    font-size: 3.5em;
+	}
+	.letter-right h4 {
+    font-size: 3em; 
+	}
+	.letter-right p {
+    font-size: 2em;
+	}
+	.text-medium {
+    font-size: 4em;
+    line-height: 2;
+	}
+	.text-big{
+	font-size: 11em;
+	}
+}
+@media(max-width: 1199px) and (min-width: 992px){
+	.navbar-left-title a, .navbar-left-title a:hover,
+	.navbar-left-title a:visited, .navbar-left-title a:focus {
+	line-height: 1.75;
+	margin-left: -1.5%;
+	}
+	.letter-right h3 {
+    font-size: 2.7em;
+	}
+	.letter-right h4 {
+    font-size: 2.2em; 
+	}
+	.letter-right p {
+    font-size: 1.6em;
+	}
+	.text-medium {
+    font-size: 5em;
+    line-height: 1.2;
+	}
+	.text-big{
+	font-size: 11em;
+	}
+	.text-small {
+	font-size: 3em;
+	}
+
+}
+@media(max-width: 991px) and (min-width: 768px){
+	.navbar-left-title a, .navbar-left-title a:hover,
+	.navbar-left-title a:visited, .navbar-left-title a:focus {
+	line-height: 2.2;
+	margin-left: -2.5%;
+	}
+	.letter-right h3 {
+    font-size: 3em;
+    margin-left: -20%;
+	}
+	.letter-right h4 {
+    font-size: 2.3em;
+    }
+}
+@media (max-width: 767px) and (min-width: 481px) {
+    body {
+    padding-right: 0px;
+    padding-left: 0px;
+    }
+    .footer{
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    .navbar-left-title a, .navbar-left-title a:hover,
+	.navbar-left-title a:visited, .navbar-left-title a:focus {
+	line-height: 2.9;
+	margin-left: -2.5%;
+	}
+	.text-medium {
+    font-size: 3em;
+    line-height: 1;
+	}
+	.text-big{
+	font-size: 8em;
+	}
+	.text-small{
+	font-size: 2em;
+	}
+	.letter-right h3 {
+    font-size: 2.5em;
+    margin-left: 5%;
+	}
+	.letter-right h4 {
+    font-size: 2em;
+	}
+	.letter-right p {
+    font-size: 1.4em;
+    }
 }
