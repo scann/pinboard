@@ -65,6 +65,15 @@ body {
 	padding-left: 0;
 	margin-bottom: 0;
 }
+.nav-pills {
+	float: right;
+}
+.nav>li>a {
+	padding: 7px 15px;
+	color: #FA961E;
+	font-size: 16px;
+	line-height: 1.6;
+}
 .pinboard-title {
 	background: url("../images/logo.png");
 	width: 116px;
@@ -195,7 +204,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focu
 	box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),0 0 5px rgba(83, 185, 52, 0.5);
 }
 label[for="login-field"], label[for="password-field"],
-label[for="username-field"], label[for="email-field"]{
+label[for="username-field"], label[for="email-field"],label[for="confirm-password-field"]{
 	display: block;
 	text-align: left;
 	margin-bottom: 0;
@@ -305,4 +314,43 @@ label[for="username-field"], label[for="email-field"]{
 	.letter-right p {
     font-size: 1.4em;
     }
+}
+@media(max-width: 480px){
+	.navbar-left-title a, .navbar-left-title a:hover,
+	.navbar-left-title a:visited, .navbar-left-title a:focus {
+	line-height: 2.6;
+	margin-left: -2.5%;
+	}
+	.text-big{
+	font-size: 5em;
+	}
+	.text-small{
+	font-size: 2em;
+	}
+	.text-medium {
+    font-size: 3em;
+    line-height: 1.5;
+	}
+	.letter-right h3 {
+    font-size: 2.5em;
+    margin-left: 5%;
+	}
+	.letter-right h4 {
+    font-size: 2em;
+	}
+	.letter-right p {
+    font-size: 1.4em;
+    }
+    .pinboard-title {
+    margin-top: -8.5%;
+    margin-bottom: -5%;
+    }
+    .buttons-main-content a:last-of-type {
+    float: right;
+    margin-right: 0%;
+	}
+	.buttons-main-content a:first-of-type {
+    float: left;
+    margin-left: 2%;
+	}
 }
