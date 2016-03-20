@@ -215,6 +215,37 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 .btn-success {
 	margin-right: 5%;
 }
+.add-pin-block {
+	width: 20%;
+	margin: 4% auto;
+}
+.btn-add-pin {
+	background-color: #6DB81C;
+	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
+	border-radius: 20px 0px 20px 0px;
+	-moz-border-radius: 20px 0px 20px 0px;
+	-webkit-border-radius: 20px 0px 20px 0px;
+	border: 3px solid #ffffff;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 4% 8% 3% 8%;
+	letter-spacing: 3px;
+	text-decoration: none;
+	outline: none;
+	transition: background-color .3s linear;
+}
+.btn-add-pin img {
+	margin-right: 3%;
+}
+.btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
+.btn-add-pin:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+.btn-add-pin:hover {
+	background-color: #5ea018;
+}
+
 /*Media queries*/
 @media(min-width: 1200px){
 	.navbar-left-title a, .navbar-left-title a:hover,
@@ -264,7 +295,9 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	.text-small {
 	font-size: 3em;
 	}
-
+	.nav>li>a {
+    line-height: 2.1;
+	}
 }
 @media(max-width: 991px) and (min-width: 768px){
 	.navbar-left-title a, .navbar-left-title a:hover,
@@ -279,6 +312,12 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	.letter-right h4 {
     font-size: 2.3em;
     }
+    .add-pin-block {
+    width: 27%;
+	}
+	.nav>li>a {
+    line-height: 2.7;
+	}
 }
 @media (max-width: 767px) and (min-width: 481px) {
     body {
@@ -314,6 +353,12 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	.letter-right p {
     font-size: 1.4em;
     }
+    .nav>li>a {
+    line-height: 3.7;
+	}
+    .add-pin-block {
+    width: 42%;
+	}
 }
 @media(max-width: 480px){
 	.navbar-left-title a, .navbar-left-title a:hover,
@@ -352,5 +397,8 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	.buttons-main-content a:first-of-type {
     float: left;
     margin-left: 2%;
+	}
+	.add-pin-block {
+    width: 62%;
 	}
 }
