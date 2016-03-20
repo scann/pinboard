@@ -1,2 +1,2 @@
-# ignoring test.html file
-test.html
+# ignoring .idea
+.idea/

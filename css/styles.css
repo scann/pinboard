@@ -246,6 +246,29 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	background-color: #5ea018;
 }
 
+#settings-block {
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 49%;
+    margin: 1% auto;
+    border-radius: 5px;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+}
+#settings-block .row {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+#settings-block span {
+	padding: 1% 4% 2% 4%;
+	color: #ffffff;
+	font-size: 1.2em;
+}
+.btn-save-setting {
+	margin: 0% 2% 0% 2%;
+}
+.pin-color-select {
+	margin-left: 4.6%;
+}
 /*Media queries*/
 @media(min-width: 1200px){
 	.navbar-left-title a, .navbar-left-title a:hover,
