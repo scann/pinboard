@@ -215,9 +215,12 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 .btn-success {
 	margin-right: 5%;
 }
+.center-block{
+	float: none;
+}
 .add-pin-block {
-	width: 20%;
-	margin: 4% auto;
+	width: 100%;
+	margin: 2% auto;
 }
 .btn-add-pin {
 	background-color: #6DB81C;
@@ -228,7 +231,7 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	border: 3px solid #ffffff;
 	font-weight: bold;
 	font-size: 1.5em;
-	padding: 4% 8% 3% 8%;
+	padding: 3% 8% 2% 8%;
 	letter-spacing: 3px;
 	text-decoration: none;
 	outline: none;
@@ -239,8 +242,11 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 }
 .btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
 .btn-add-pin:visited {
-	color: #ffffff;
-	text-decoration: none;
+	display: block;
+    color: #ffffff;
+    text-decoration: none;
+    width: 53%;
+    margin: 0 auto;
 }
 .btn-add-pin:hover {
 	background-color: #5ea018;
@@ -270,7 +276,7 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	margin-left: 4.6%;
 }
 /*Media queries*/
-@media(min-width: 1200px){
+@media(min-width: 1200px) {
 	.navbar-left-title a, .navbar-left-title a:hover,
 	.navbar-left-title a:visited, .navbar-left-title a:focus {
 	line-height: 1.5;
@@ -291,6 +297,10 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	}
 	.text-big{
 	font-size: 11em;
+	}
+	.btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
+	.btn-add-pin:visited {
+		width: 53%;
 	}
 }
 @media(max-width: 1199px) and (min-width: 992px){
@@ -341,6 +351,10 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	.nav>li>a {
     line-height: 2.7;
 	}
+	.btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
+	.btn-add-pin:visited {
+		width: 96%;
+	}
 }
 @media (max-width: 767px) and (min-width: 481px) {
     body {
@@ -379,10 +393,12 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
     .nav>li>a {
     line-height: 3.7;
 	}
-    .add-pin-block {
-    width: 42%;
+	.btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
+	.btn-add-pin:visited {
+		width: 50%;
 	}
 }
+
 @media(max-width: 480px){
 	.navbar-left-title a, .navbar-left-title a:hover,
 	.navbar-left-title a:visited, .navbar-left-title a:focus {
@@ -421,7 +437,8 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
     float: left;
     margin-left: 2%;
 	}
-	.add-pin-block {
-    width: 62%;
+	.btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
+	.btn-add-pin:visited {
+		width: 50%;
 	}
 }
