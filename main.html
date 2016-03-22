@@ -42,35 +42,34 @@
 		<div class="main-content">
 			<div id="settings-block">
 			<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="row">
+				<div class="row text-center">
 					<span>Choose background color for your pinboard</span>
-						<select>
-							<option value="#e8e8e8">Default</option>
-							<option value="rgb(255, 138, 128)">Coral</option>
-							<option value="rgb(255, 209, 128)">Orange</option>
-							<option value="rgb(255, 255, 141)">Yellow</option>
-							<option value="rgb(207, 216, 220)">Grey</option>
-							<option value="rgb(128, 216, 255)">Blue</option>
-							<option value="rgb(167, 255, 235)">Teal</option>
-							<option value="rgb(204, 255, 144)">Green</option>
-						</select>
-					<a href='#' class="btn btn-success btn-save-setting">Save changes</a>
-					
+					<input type="color" value="#E8E8E8" list="board-colors" />
+					<datalist id="board-colors">
+  						<option>#FF8A80</option>
+  						<option>#FFD180</option>
+  						<option>#FFFF8D</option>
+  						<option>#CFD8DC</option>
+  						<option>#80D8FF</option>
+  						<option>#A7FFEB</option>
+  						<option>#CCFF90</option>
+					</datalist>
 				</div>
-				<div class="row">
+				<div class="row text-center">
 					<span>Choose background color for your pins</span>
-					<select class="pin-color-select">
-							<option value="#e8e8e8">Default</option>
-							<option value="rgb(255, 138, 128)">Coral</option>
-							<option value="rgb(255, 209, 128)">Orange</option>
-							<option value="rgb(255, 255, 141)">Yellow</option>
-							<option value="rgb(207, 216, 220)">Grey</option>
-							<option value="rgb(128, 216, 255)">Blue</option>
-							<option value="rgb(167, 255, 235)">Teal</option>
-							<option value="rgb(204, 255, 144)">Green</option>
-						</select>
-					<a href='#' class="btn btn-success btn-save-setting">Save changes</a>
-					
+					<input type="color" value="#E8E8E8" list="pin-colors" />
+					<datalist id="pin-colors">
+  						<option>#FF8A80</option>
+  						<option>#FFD180</option>
+  						<option>#FFFF8D</option>
+  						<option>#CFD8DC</option>
+  						<option>#80D8FF</option>
+  						<option>#A7FFEB</option>
+  						<option>#CCFF90</option>
+					</datalist>
+				</div>
+				<div class="row text-center">
+					<a href='#' class="btn btn-success btn-save-settings">Save changes</a>
 				</div>
 			</div>	
 				<div class="row">
