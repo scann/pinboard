@@ -215,9 +215,6 @@ label[for="pin-message-field"], label[for="pin-date-field"]
 	text-align: left;
 	margin-bottom: 0;
 }
-label[for="pin-message-field"] {
-	float: left;
-}
 .btn {
 	padding: 6px 18px;
 }
@@ -294,35 +291,54 @@ label[for="pin-message-field"] {
 }
 .theme-block {
 	float: left;
-	width: 60%;
+	width: 65%;
 }
 .date-block {
 	float: right;
-	width: 40%;
+	width: 35%;
 }
-
 .message-block{
 	width: 80%;
 	margin-top: 10%;
 	margin-bottom: 4%;
 }
-textarea {
+.pin-handwritten{
+	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
+}
+#pin-message-field{
 	resize: none;
 	width: 100%;
-	height: 80px;
+	height: 210px;
 }
-
 #pin-theme-field {
-	width: 90%;
+	width: 95%;
+	font-size: 20px;
+	letter-spacing: 2px;
 }
 #pin-date-field {
-	height: 35px;
+	height: 40px;
 	border-radius: 3px;
 }
-label[for="pin-message-field"]{
-	padding-bottom: 5%;
+#addPinLabel {
+	font-size: 25px;
+	letter-spacing: 2px;
 }
-
+.message-block, .theme-block, .date-block {
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+label[for="pin-message-field"]{
+	padding-bottom: 7%;
+	padding-top: 4%;
+	float: left;
+}
+.form-control{
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+.pin-handwritten > .btn {
+	letter-spacing: 2px;
+}
 /*Media queries*/
 @media(min-width: 1200px) {
 	.navbar-left-title a, .navbar-left-title a:hover,
