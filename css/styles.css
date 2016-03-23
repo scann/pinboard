@@ -199,15 +199,24 @@ input[type="text"], input[type="password"], input[type="email"] {
 	outline: none;
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
 }
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+input[type="text"]:focus, input[type="password"]:focus, 
+input[type="email"]:focus, input[type="date"]:focus,
+.form-control:focus {
 	border-color: #6DB81C;
 	box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),0 0 5px rgba(83, 185, 52, 0.5);
+	outline: none;
 }
 label[for="login-field"], label[for="password-field"],
-label[for="username-field"], label[for="email-field"],label[for="confirm-password-field"]{
+label[for="username-field"], label[for="email-field"],
+label[for="confirm-password-field"], label[for="pin-theme-field"],
+label[for="pin-message-field"], label[for="pin-date-field"] 
+{
 	display: block;
 	text-align: left;
 	margin-bottom: 0;
+}
+label[for="pin-message-field"] {
+	float: left;
 }
 .btn {
 	padding: 6px 18px;
@@ -219,8 +228,11 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	float: none;
 }
 .add-pin-block {
-	width: 100%;
+	width: 90%;
 	margin: 2% auto;
+}
+.btn-no-margin {
+	margin: 0;
 }
 .btn-add-pin {
 	background-color: #6DB81C;
@@ -247,6 +259,7 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
     text-decoration: none;
     width: 53%;
     margin: 0 auto;
+    outline: none;
 }
 .btn-add-pin:hover {
 	background-color: #5ea018;
@@ -274,6 +287,41 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 .btn-save-settings {
 	margin: 0% 2% 0% 2%;
 }
+#close-settings-dialog {
+	position: relative;
+	top: 1%;
+	left: -2%;
+}
+.theme-block {
+	float: left;
+	width: 60%;
+}
+.date-block {
+	float: right;
+	width: 40%;
+}
+
+.message-block{
+	width: 80%;
+	margin-top: 10%;
+	margin-bottom: 4%;
+}
+textarea {
+	resize: none;
+	width: 100%;
+	height: 80px;
+}
+
+#pin-theme-field {
+	width: 90%;
+}
+#pin-date-field {
+	height: 35px;
+	border-radius: 3px;
+}
+label[for="pin-message-field"]{
+	padding-bottom: 5%;
+}
 
 /*Media queries*/
 @media(min-width: 1200px) {
@@ -300,7 +348,7 @@ label[for="username-field"], label[for="email-field"],label[for="confirm-passwor
 	}
 	.btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
 	.btn-add-pin:visited {
-		width: 53%;
+		width: 80%;
 	}
 }
 @media(max-width: 1199px) and (min-width: 992px){

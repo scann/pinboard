@@ -41,7 +41,7 @@
 		</div>
 		<div class="main-content">
 			<div id="settings-block">
-			<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<button type="button" class="close" id='close-settings-dialog' aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<div class="row text-center">
 					<span>Choose background color for your pinboard</span>
 					<input type="color" value="#E8E8E8" list="board-colors" />
@@ -79,9 +79,42 @@
 			<div class="add-pin-block">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 center-block">
-						<a class="btn-add-pin" href="#" role="button"><img src="images/btn.png"/>Add new pin</a>
+						<a class="btn btn-add-pin" href="#" role="button" data-toggle="modal" data-target="#addPin"><img src="images/btn.png"/>Add new pin</a>
 					</div>
-				</div>	
+				</div>
+                <div class="modal fade" id="addPin" tabindex="-1" role="dialog" aria-labelledby="addPinLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="addPinLabel">Add new pin</h4>
+                            </div>
+                            <div class="modal-body">
+                            	
+                            		<div class="theme-block">
+                            			<label for="pin-theme-field">Pin theme</label>
+                            			<br>
+                                		<input type="text" name="pin-theme" id="pin-theme-field"placeholder="Max.40 symbols" maxlength="40" required/>
+                                	</div>
+                                	<div class="date-block">	
+                                		<label for="pin-date-field">Pin date</label>
+                                		<br>
+                                		<input type="date" name="calendar" id="pin-date-field" required/>
+                                	</div>	
+                                	<br>
+                                	<br>
+                                <div class="message-block">
+                                <label for="pin-message-field">Pin message</label>	
+                                <textarea class="form-control" name="pin-details" id="pin-message-field" placeholder="Max.256 symbols" maxlength="256"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success btn-no-margin">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			</div>
 			<div class="container">
 				<div class="row">
@@ -99,7 +132,7 @@
 		</div>
 	</div>
 </footer>
-<script src="js/settings.js"></script>
+<script src="js/main.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
