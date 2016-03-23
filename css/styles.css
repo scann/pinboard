@@ -291,11 +291,11 @@ label[for="pin-message-field"], label[for="pin-date-field"]
 }
 .theme-block {
 	float: left;
-	width: 65%;
+	width: 64%;
 }
 .date-block {
 	float: right;
-	width: 35%;
+	width: 36%;
 }
 .message-block{
 	width: 80%;
@@ -307,7 +307,7 @@ label[for="pin-message-field"], label[for="pin-date-field"]
 }
 #pin-message-field{
 	resize: none;
-	width: 100%;
+	width: 125%;
 	height: 210px;
 }
 #pin-theme-field {
@@ -318,6 +318,8 @@ label[for="pin-message-field"], label[for="pin-date-field"]
 #pin-date-field {
 	height: 40px;
 	border-radius: 3px;
+	font-size: 20px;
+	letter-spacing: 2px;
 }
 #addPinLabel {
 	font-size: 25px;
