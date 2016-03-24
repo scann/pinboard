@@ -40,7 +40,6 @@ body {
 .content-wrapper {
 	width: 100%;
 	margin: 0 auto;
-	/*padding-top: -40px;*/
 }
 .content-wrapper, .footer-container{
 	min-width: 320px;
@@ -319,7 +318,7 @@ label[for="pin-due-date"]
 #pin-message-field{
 	resize: none;
 	width: 125%;
-	height: 210px;
+	height: 155px;
 }
 #pin-theme-field {
 	width: 95%;
@@ -351,6 +350,10 @@ label[for="pin-message-field"]{
 }
 .pin-handwritten > .btn {
 	letter-spacing: 2px;
+}
+.pin-item {
+	background: url("../images/paper.jpg");
+	margin: 2% 4%;
 }
 /*Media queries*/
 @media(min-width: 1200px) {
