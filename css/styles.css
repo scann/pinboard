@@ -209,7 +209,8 @@ input[type="email"]:focus, input[type="date"]:focus,
 label[for="login-field"], label[for="password-field"],
 label[for="username-field"], label[for="email-field"],
 label[for="confirm-password-field"], label[for="pin-theme-field"],
-label[for="pin-message-field"], label[for="pin-date-field"] 
+label[for="pin-message-field"], label[for="pin-creation-field"],
+label[for="pin-due-date"] 
 {
 	display: block;
 	text-align: left;
@@ -289,13 +290,22 @@ label[for="pin-message-field"], label[for="pin-date-field"]
 	top: 1%;
 	left: -2%;
 }
+.date-block {
+	width: 100%;
+	margin-bottom: 15%;
+}
+.creation-date-block {
+	width: 50%;
+	float: left;
+}
+.due-date-block {
+	width: 50%;
+	float: right;
+}
 .theme-block {
 	float: left;
-	width: 64%;
-}
-.date-block {
-	float: right;
-	width: 36%;
+	width: 77%;
+	margin-bottom: 1%;
 }
 .message-block{
 	width: 80%;
@@ -305,6 +315,7 @@ label[for="pin-message-field"], label[for="pin-date-field"]
 .pin-handwritten{
 	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
 }
+
 #pin-message-field{
 	resize: none;
 	width: 125%;
@@ -315,7 +326,7 @@ label[for="pin-message-field"], label[for="pin-date-field"]
 	font-size: 20px;
 	letter-spacing: 2px;
 }
-#pin-date-field {
+#pin-creation-field, #pin-due-date {
 	height: 40px;
 	border-radius: 3px;
 	font-size: 20px;
@@ -330,7 +341,6 @@ label[for="pin-message-field"], label[for="pin-date-field"]
 	letter-spacing: 2px;
 }
 label[for="pin-message-field"]{
-	padding-bottom: 7%;
 	padding-top: 4%;
 	float: left;
 }

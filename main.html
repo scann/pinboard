@@ -90,19 +90,20 @@
                                 <h4 class="modal-title" id="addPinLabel">Add new pin</h4>
                             </div>
                             <div class="modal-body pin-handwritten">
-                            	
+                            		<div class="date-block">
+                            			<div class="creation-date-block">	
+                                			<label for="pin-creation-field">Pin creation date</label>
+                                			<input type="text" name="creation-date" id="pin-creation-field" required/>
+                                		</div>
+                                		<div class="due-date-block">	
+                                			<label for="pin-due-date">Pin due date</label>
+                                			<input type="date" name="calendar" id="pin-due-date" required/>
+                                		</div>	
+                                	</div>	
                             		<div class="theme-block">
                             			<label for="pin-theme-field">Pin theme</label>
-                            			<br>
                                 		<input type="text" name="pin-theme" id="pin-theme-field"placeholder="Max.40 symbols" maxlength="40" required/>
                                 	</div>
-                                	<div class="date-block">	
-                                		<label for="pin-date-field">Pin date</label>
-                                		<br>
-                                		<input type="date" name="calendar" id="pin-date-field" required/>
-                                	</div>	
-                                	<br>
-                                	<br>
                                 <div class="message-block pin-handwritten">
                                 <label for="pin-message-field">Pin message</label>	
                                 <textarea class="form-control" name="pin-details" id="pin-message-field" placeholder="Max.256 symbols" maxlength="256"></textarea>
