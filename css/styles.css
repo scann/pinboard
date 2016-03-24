@@ -355,6 +355,21 @@ label[for="pin-message-field"]{
 	background: url("../images/paper.jpg");
 	margin: 2% 4%;
 }
+.pin-item-theme {
+	font-size: 170%;
+	margin-top: 3%;
+	letter-spacing: 2px;
+}
+.pin-item-date, .pin-item-due-date {
+	font-size: 150%;
+	margin-top: 4%;
+	letter-spacing: 2px;
+}
+.pin-item-message {
+	font-size: 120%;
+	margin-bottom: 3%;
+	letter-spacing: 1px;
+}
 /*Media queries*/
 @media(min-width: 1200px) {
 	.navbar-left-title a, .navbar-left-title a:hover,
