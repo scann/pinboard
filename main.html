@@ -79,7 +79,7 @@
 			<div class="add-pin-block">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 center-block">
-						<a class="btn btn-add-pin" href="#" role="button" data-toggle="modal" data-target="#addPin"><img src="images/btn.png"/>Add new pin</a>
+						<a class="btn btn-add-pin" href="#" role="button" data-toggle="modal" data-target="#addPin" id="add-pin-btn"><img src="images/btn.png"/>Add new pin</a>
 					</div>
 				</div>
                 <div class="modal fade" id="addPin" tabindex="-1" role="dialog" aria-labelledby="addPinLabel">
@@ -93,7 +93,7 @@
                             		<div class="date-block">
                             			<div class="creation-date-block">	
                                 			<label for="pin-creation-field">Pin creation date</label>
-                                			<input type="text" name="creation-date" id="pin-creation-field" required/>
+                                			<input type="text" name="creation-date" id="pin-creation-field" readonly="" />
                                 		</div>
                                 		<div class="due-date-block">	
                                 			<label for="pin-due-date">Pin due date</label>

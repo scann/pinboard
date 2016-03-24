@@ -331,6 +331,7 @@ label[for="pin-due-date"]
 	border-radius: 3px;
 	font-size: 20px;
 	letter-spacing: 2px;
+	padding-left: 3%;
 }
 #addPinLabel {
 	font-size: 25px;
