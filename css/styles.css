@@ -18,7 +18,6 @@ html, body {
 html {
 	font-size: 10px;
 	font-family: sans-serif;
-	/*position: relative;*/
 	min-height: 100%;
 }
 body {
@@ -397,6 +396,9 @@ label[for="pin-message-field"]{
 	.btn-add-pin:visited {
 		width: 80%;
 	}
+	#settings-block {
+		width: 38%;
+	}
 }
 @media(max-width: 1199px) and (min-width: 992px){
 	.navbar-left-title a, .navbar-left-title a:hover,
@@ -426,6 +428,9 @@ label[for="pin-message-field"]{
 	.nav>li>a {
     line-height: 2.1;
 	}
+	#settings-block {
+		width: 51%;
+	}
 }
 @media(max-width: 991px) and (min-width: 768px){
 	.navbar-left-title a, .navbar-left-title a:hover,
@@ -449,6 +454,9 @@ label[for="pin-message-field"]{
 	.btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
 	.btn-add-pin:visited {
 		width: 96%;
+	}
+	#settings-block {
+		width: 68%;
 	}
 }
 @media (max-width: 767px) and (min-width: 481px) {
@@ -492,6 +500,12 @@ label[for="pin-message-field"]{
 	.btn-add-pin:visited {
 		width: 50%;
 	}
+	#settings-block {
+		width: 91%;
+	}
+	#settings-block span {
+		font-size: 1em;
+	}
 }
 
 @media(max-width: 480px){
@@ -521,7 +535,7 @@ label[for="pin-message-field"]{
     font-size: 1.4em;
     }
     .pinboard-title {
-    margin-top: -8.5%;
+    margin-top: -5.5%;
     margin-bottom: -5%;
     }
     .buttons-main-content a:last-of-type {
@@ -535,5 +549,14 @@ label[for="pin-message-field"]{
 	.btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
 	.btn-add-pin:visited {
 		width: 50%;
+	}
+	.nav-pills {
+		margin-top: 3%;
+	}
+	#settings-block {
+		width: 91%;
+	}
+	#settings-block span {
+		font-size: 1em;
 	}
 }
