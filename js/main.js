@@ -11,9 +11,11 @@ hideSettings.addEventListener('click', function(){
 
 var addPin = document.getElementById('add-pin-btn');
 var creationDate = document.getElementById('pin-creation-field');
+var dueDate = document.getElementById('pin-due-date');
+
 addPin.addEventListener('click', function(){
     var date = new Date();
     creationDate.value = date.toLocaleDateString();
+    dueDate.valueAsDate = date;
 });
-
 
