@@ -79,10 +79,10 @@
 			<div class="add-pin-block">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 center-block">
-						<a class="btn btn-add-pin" href="#" role="button" data-toggle="modal" data-target="#addPin" id="add-pin-btn"><img src="images/btn.png"/>Add new pin</a>
+						<a class="btn btn-add-pin" href="#" role="button" data-toggle="modal" data-target="#addPinModal" id="add-pin-btn"><img src="images/btn.png"/>Add new pin</a>
 					</div>
 				</div>
-                <div class="modal fade" id="addPin" tabindex="-1" role="dialog" aria-labelledby="addPinLabel">
+                <div class="modal fade" id="addPinModal" tabindex="-1" role="dialog" aria-labelledby="addPinLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header pin-handwritten">
@@ -111,14 +111,14 @@
                             </div>
                             <div class="modal-footer pin-handwritten">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel & close</button>
-                                <button type="button" class="btn btn-success btn-no-margin">Save & add pin</button>
+                                <button type="button" class="btn btn-success btn-no-margin" id="save-add-pin">Save & add pin</button>
                             </div>
                         </div>
                     </div>
                 </div>
 			</div>
 			<div class="container pin-container">
-				<div class="row pin-row">
+				<div class="row pin-row" id="saved-pins-row">
 					<div class="pin-item col-lg-3 col-md-3 col-sm-3 col-xs-3">
 						<p class="pin-item-theme pin-handwritten">Some theme</p>
 						<p class="pin-item-date pin-handwritten">Some date</p>
@@ -151,7 +151,7 @@
 	</div>
 </footer>
 <script src="js/main.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
