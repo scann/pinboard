@@ -38,6 +38,7 @@ var editPinTheme = document.getElementById('editpin-theme-field');
 var editPinMessage = document.getElementById('editpin-message-field');
 var updatePinBtn = document.getElementById('update-pin');
 var deletePinBtn = document.getElementById('delete-pin');
+var closePinBtn = document.getElementById('close-pin');
 
 saveAddPin.addEventListener('click', function(){
     var newPinItem = document.createElement('div');
@@ -94,6 +95,10 @@ saveAddPin.addEventListener('click', function(){
                 };
                 selectedPin.classList.remove('selected');
                 updatePinBtn.setAttribute('data-dismiss', 'modal');
+            });
+            closePinBtn.addEventListener('click', function(){
+                var selectedPin = document.getElementsByClassName('selected')[0];
+                selectedPin.classList.remove('selected');
             });
         });
     };
