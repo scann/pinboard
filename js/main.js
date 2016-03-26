@@ -37,6 +37,7 @@ var editPinDueDate = document.getElementById('editpin-due-date');
 var editPinTheme = document.getElementById('editpin-theme-field');
 var editPinMessage = document.getElementById('editpin-message-field');
 var updatePinBtn = document.getElementById('update-pin');
+var deletePinBtn = document.getElementById('delete-pin');
 
 saveAddPin.addEventListener('click', function(){
     var newPinItem = document.createElement('div');
@@ -74,23 +75,33 @@ saveAddPin.addEventListener('click', function(){
         var pinItem = existingPinItems[i];
         pinItem.addEventListener('click', function(){
             var pin = this;
+            pin.className += ' selected';
+
             editPinTheme.value = pin.childNodes[0].innerText;
             editPinCreationDate.value = pin.childNodes[1].innerText;
             editPinDueDate.value = reformatDate(pin.childNodes[2].innerText.split(": ")[1]);
             editPinMessage.value = pin.childNodes[3].innerText;
+
+            updatePinBtn.addEventListener('click', function(){
+                var selectedPin = document.getElementsByClassName('selected')[0];
+                selectedPin.childNodes[0].innerText = editPinTheme.value;
+                selectedPin.childNodes[1].innerText = editPinCreationDate.value;
+                selectedPin.childNodes[2].innerText = "Due to: " + editPinDueDate.valueAsDate.toLocaleDateString();
+                if (!editPinMessage.value) {
+                    selectedPin.childNodes[3].innerText = "<No message>";
+                } else {
+                    selectedPin.childNodes[3].innerText = editPinMessage.value;
+                };
+                selectedPin.classList.remove('selected');
+                updatePinBtn.setAttribute('data-dismiss', 'modal');
+            });
         });
     };
-    updatePinBtn.addEventListener('click', function(){
-        newPinDetails[0].innerText = editPinTheme.value;
-        newPinDetails[1].innerText = editPinCreationDate.value;
-        newPinDetails[2].innerText = "Due to: " + editPinDueDate.valueAsDate.toLocaleDateString();
-        if (!editPinMessage.value) {
-            newPinDetails[3].innerText = "<No message>";
-        } else {
-            newPinDetails[3].innerText = editPinMessage.value;
-        };
-        updatePinBtn.setAttribute('data-dismiss', 'modal');
-    });
+
+    /*deletePinBtn.addEventListener('click', function(){
+        deletePinBtn.setAttribute('data-dismiss', 'modal');
+        this.newPinItem.remove();
+    });*/
 });
 
 
