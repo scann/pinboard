@@ -41,7 +41,7 @@
 		</div>
 		<div class="main-content">
 			<div id="settings-block">
-				<button type="button" class="close" id='close-settings-dialog' aria-label="Close"><span 	aria-hidden="true">&times;</span></button>
+				<button type="button" class="close" id='close-settings-dialog' aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<div class="row text-center">
 						<span>Choose background color for your pinboard</span>
 						<input type="color" value="#E8E8E8" list="board-colors" />
@@ -119,6 +119,41 @@
                 </div>
                 </form>
 			</div>
+			<div class="modal fade" id="showPinModal" tabindex="-1" role="dialog" aria-labelledby="showPinLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header pin-handwritten">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="showPinLabel">Edit pin</h4>
+                            </div>
+                            <div class="modal-body pin-handwritten">
+                            		<div class="date-block">
+                            			<div class="creation-date-block">	
+                                			<label for="pin-creation-field">Pin creation date</label>
+                                			<input type="text" name="creation-date" id="editpin-creation-field" readonly="" />
+                                		</div>
+                                		<div class="due-date-block">	
+                                			<label for="pin-due-date">Pin due date</label>
+                                			<input type="date" name="calendar" id="editpin-due-date" required/>
+                                		</div>	
+                                	</div>	
+                            		<div class="theme-block">
+                            			<label for="pin-theme-field">Pin theme</label>
+                                		<input type="text" name="pin-theme" id="editpin-theme-field" maxlength="40" required/>
+                                	</div>
+                                <div class="message-block pin-handwritten">
+                                <label for="pin-message-field">Pin message</label>	
+                                <textarea class="form-control" name="pin-details" id="editpin-message-field" maxlength="256"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer pin-handwritten">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Delete pin</button>
+                                <button type="button" class="btn btn-success btn-no-margin" id="save-add-pin">Update pin</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			<div class="container pin-container">
 				<div class="row pin-row" id="saved-pins-row">
 					<div class="pin-item col-lg-3 col-md-3 col-sm-3 col-xs-3">

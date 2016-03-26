@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 var settings = document.getElementById('settings-block');
 var showSettings = document.getElementById('settings');
 var hideSettings = document.getElementsByClassName('close')[0];
@@ -29,14 +22,25 @@ addPin.addEventListener('click', function(){
     dueDate.valueAsDate = date;
 });
 
+function reformatDate(dateStr)
+{
+    return dateStr.split(".").reverse().join("-");
+
+}
 var saveAddPin = document.getElementById('save-add-pin');
 var savedPinsRow = document.getElementById('saved-pins-row');
 var pinTheme = document.getElementById('pin-theme-field');
 var pinMessage = document.getElementById('pin-message-field');
-
+var existingPinItems = document.getElementsByClassName('pin-item');
+var editPinCreationDate = document.getElementById('editpin-creation-field');
+var editPinDueDate = document.getElementById('editpin-due-date');
+var editPinTheme = document.getElementById('editpin-theme-field');
+var editPinMessage = document.getElementById('editpin-message-field');
 saveAddPin.addEventListener('click', function(){
     var newPinItem = document.createElement('div');
     newPinItem.className = 'pin-item'  +' col-lg-3' + ' col-md-3' + ' col-sm-3' + ' col-xs-3';
+    newPinItem.setAttribute('data-toggle', 'modal');
+    newPinItem.setAttribute('data-target', '#showPinModal');
     savedPinsRow.appendChild(newPinItem);
     var newPinDetails = [];
     for (var i=0; i < 4; i++){
@@ -63,6 +67,22 @@ saveAddPin.addEventListener('click', function(){
     creationDate.value = "";
     pinMessage.value = "";
     saveAddPin.setAttribute('data-dismiss', 'modal');
+
+    for (i = 0; i < existingPinItems.length; i++){
+        var pinItem = existingPinItems[i];
+        pinItem.addEventListener('click', function(){
+            var pin = this;
+            editPinTheme.value = pin.childNodes[0].innerText;
+            editPinCreationDate.value = pin.childNodes[1].innerText;
+            editPinDueDate.value = reformatDate(pin.childNodes[2].innerText.split(": ")[1]);
+            editPinMessage.value = pin.childNodes[3].innerText;
+        });
+    };
+
 });
+
+
+
+
 
 

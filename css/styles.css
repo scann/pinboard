@@ -323,24 +323,25 @@ label[for="pin-due-date"]
 	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
 }
 
-#pin-message-field{
+#pin-message-field, #editpin-message-field{
 	resize: none;
 	width: 125%;
 	height: 155px;
 }
-#pin-theme-field {
+#pin-theme-field, #editpin-theme-field {
 	width: 95%;
 	font-size: 20px;
 	letter-spacing: 2px;
 }
-#pin-creation-field, #pin-due-date {
+#pin-creation-field, #pin-due-date,
+#editpin-creation-field, #editpin-due-date {
 	height: 40px;
 	border-radius: 3px;
 	font-size: 20px;
 	letter-spacing: 2px;
 	padding-left: 3%;
 }
-#addPinLabel {
+#addPinLabel, #showPinLabel {
 	font-size: 25px;
 	letter-spacing: 2px;
 }
