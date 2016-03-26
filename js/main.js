@@ -100,13 +100,13 @@ saveAddPin.addEventListener('click', function(){
                 var selectedPin = document.getElementsByClassName('selected')[0];
                 selectedPin.classList.remove('selected');
             });
+            deletePinBtn.addEventListener('click', function(){
+                var selectedPin = document.getElementsByClassName('selected')[0]
+                selectedPin.remove();
+                deletePinBtn.setAttribute('data-dismiss', 'modal');
+             });
         });
     };
-
-    /*deletePinBtn.addEventListener('click', function(){
-        deletePinBtn.setAttribute('data-dismiss', 'modal');
-        this.newPinItem.remove();
-    });*/
 });
 
 
