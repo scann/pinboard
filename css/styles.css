@@ -220,6 +220,15 @@ label[for="pin-due-date"]
 .btn-success {
 	margin-right: 5%;
 }
+#sign {
+	margin-right: 0%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+#register {
+	margin-bottom: 5%;
+	margin-right: 0%;
+}
 .center-block{
 	float: none;
 }

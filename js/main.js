@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 var settings = document.getElementById('settings-block');
 var showSettings = document.getElementById('settings');
 var hideSettings = document.getElementsByClassName('close')[0];
@@ -57,3 +64,5 @@ saveAddPin.addEventListener('click', function(){
     pinMessage.value = "";
     saveAddPin.setAttribute('data-dismiss', 'modal');
 });
+
+

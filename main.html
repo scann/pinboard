@@ -41,36 +41,36 @@
 		</div>
 		<div class="main-content">
 			<div id="settings-block">
-			<button type="button" class="close" id='close-settings-dialog' aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="row text-center">
-					<span>Choose background color for your pinboard</span>
-					<input type="color" value="#E8E8E8" list="board-colors" />
-					<datalist id="board-colors">
-  						<option>#FF8A80</option>
-  						<option>#FFD180</option>
-  						<option>#FFFF8D</option>
-  						<option>#CFD8DC</option>
-  						<option>#80D8FF</option>
-  						<option>#A7FFEB</option>
-  						<option>#CCFF90</option>
-					</datalist>
-				</div>
-				<div class="row text-center">
-					<span>Choose background color for your pins</span>
-					<input type="color" value="#E8E8E8" list="pin-colors" />
-					<datalist id="pin-colors">
-  						<option>#FF8A80</option>
-  						<option>#FFD180</option>
-  						<option>#FFFF8D</option>
-  						<option>#CFD8DC</option>
-  						<option>#80D8FF</option>
-  						<option>#A7FFEB</option>
-  						<option>#CCFF90</option>
-					</datalist>
-				</div>
-				<div class="row text-center">
-					<a href='#' class="btn btn-success btn-save-settings">Save changes</a>
-				</div>
+				<button type="button" class="close" id='close-settings-dialog' aria-label="Close"><span 	aria-hidden="true">&times;</span></button>
+					<div class="row text-center">
+						<span>Choose background color for your pinboard</span>
+						<input type="color" value="#E8E8E8" list="board-colors" />
+						<datalist id="board-colors">
+  							<option>#FF8A80</option>
+  							<option>#FFD180</option>
+  							<option>#FFFF8D</option>
+  							<option>#CFD8DC</option>
+  							<option>#80D8FF</option>
+  							<option>#A7FFEB</option>
+  							<option>#CCFF90</option>
+						</datalist>
+					</div>
+					<div class="row text-center">
+						<span>Choose background color for your pins</span>
+						<input type="color" value="#E8E8E8" list="pin-colors" />
+						<datalist id="pin-colors">
+  							<option>#FF8A80</option>
+  							<option>#FFD180</option>
+  							<option>#FFFF8D</option>
+  							<option>#CFD8DC</option>
+  							<option>#80D8FF</option>
+  							<option>#A7FFEB</option>
+  							<option>#CCFF90</option>
+						</datalist>
+					</div>
+					<div class="row text-center">
+						<a href='#' class="btn btn-success btn-save-settings">Save changes</a>
+					</div>
 			</div>	
 				<div class="row">
 
@@ -82,6 +82,7 @@
 						<a class="btn btn-add-pin" href="#" role="button" data-toggle="modal" data-target="#addPinModal" id="add-pin-btn"><img src="images/btn.png"/>Add new pin</a>
 					</div>
 				</div>
+				<form>
                 <div class="modal fade" id="addPinModal" tabindex="-1" role="dialog" aria-labelledby="addPinLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -116,6 +117,7 @@
                         </div>
                     </div>
                 </div>
+                </form>
 			</div>
 			<div class="container pin-container">
 				<div class="row pin-row" id="saved-pins-row">
