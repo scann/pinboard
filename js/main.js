@@ -36,6 +36,8 @@ var editPinCreationDate = document.getElementById('editpin-creation-field');
 var editPinDueDate = document.getElementById('editpin-due-date');
 var editPinTheme = document.getElementById('editpin-theme-field');
 var editPinMessage = document.getElementById('editpin-message-field');
+var updatePinBtn = document.getElementById('update-pin');
+
 saveAddPin.addEventListener('click', function(){
     var newPinItem = document.createElement('div');
     newPinItem.className = 'pin-item'  +' col-lg-3' + ' col-md-3' + ' col-sm-3' + ' col-xs-3';
@@ -78,8 +80,21 @@ saveAddPin.addEventListener('click', function(){
             editPinMessage.value = pin.childNodes[3].innerText;
         });
     };
-
+    updatePinBtn.addEventListener('click', function(){
+        newPinDetails[0].innerText = editPinTheme.value;
+        newPinDetails[1].innerText = editPinCreationDate.value;
+        newPinDetails[2].innerText = "Due to: " + editPinDueDate.valueAsDate.toLocaleDateString();
+        if (!editPinMessage.value) {
+            newPinDetails[3].innerText = "<No message>";
+        } else {
+            newPinDetails[3].innerText = editPinMessage.value;
+        };
+        updatePinBtn.setAttribute('data-dismiss', 'modal');
+    });
 });
+
+
+
 
 
 

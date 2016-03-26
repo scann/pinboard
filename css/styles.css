@@ -368,6 +368,7 @@ label[for="pin-message-field"]{
 	font-size: 170%;
 	margin-top: 3%;
 	letter-spacing: 2px;
+	word-wrap: break-word;
 }
 .pin-item-date, .pin-item-due-date {
 	font-size: 150%;
@@ -378,6 +379,7 @@ label[for="pin-message-field"]{
 	font-size: 120%;
 	margin-bottom: 3%;
 	letter-spacing: 1px;
+	word-wrap: break-word;
 }
 /*Media queries*/
 @media(min-width: 1200px) {
