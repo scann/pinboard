@@ -186,7 +186,10 @@ pinColor.addEventListener('input', function(){
         }
     });
 });
-
+var signOutBtn = document.getElementById('sign-out');
+signOutBtn.addEventListener('click', function(){
+    window.location.href = 'index.html';
+});
 
 
 
