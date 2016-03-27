@@ -153,8 +153,17 @@ saveAddPin.addEventListener('click', function(){
         });
     };
 });
+var boardColor = document.getElementById('board-color');
+var saveColorsBtn = document.getElementById('save-colors-btn');
 
-
+boardColor.addEventListener('input', function(){
+    var boardColorValue = this.value;
+    saveColorsBtn.addEventListener('click', function(){
+        settings.style.display = 'none';
+        document.body.style.backgroundImage = 'none';
+        document.body.style.backgroundColor = boardColorValue;
+    });
+});
 
 
 
