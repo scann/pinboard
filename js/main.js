@@ -27,6 +27,7 @@ function reformatDate(dateStr)
     return dateStr.split(".").reverse().join("-");
 
 }
+
 var saveAddPin = document.getElementById('save-add-pin');
 var savedPinsRow = document.getElementById('saved-pins-row');
 var pinTheme = document.getElementById('pin-theme-field');
@@ -39,10 +40,54 @@ var editPinMessage = document.getElementById('editpin-message-field');
 var updatePinBtn = document.getElementById('update-pin');
 var deletePinBtn = document.getElementById('delete-pin');
 var closePinBtn = document.getElementById('close-pin');
+var isLine = false;
+
+function changeToLineGrid() {
+    var pinItems = document.getElementsByClassName('pin-item');
+    for (i = 0; i < pinItems.length; i++) {
+        pinItems[i].classList.remove('col-lg-3');
+        pinItems[i].classList.remove('col-md-3');
+        pinItems[i].classList.remove('col-sm-3');
+        pinItems[i].classList.remove('col-xs-3');
+        pinItems[i].className += ' col-lg-6' + ' col-md-6' + ' col-sm-6' + ' col-xs-6' + ' pin-item-line-grid';
+    };
+
+    isLine = true;
+    changeGrid = document.getElementById('change-grid');
+    changeGrid.removeEventListener('click', changeToLineGrid);
+    changeGrid.addEventListener('click',
+        changeToColGrid);
+
+};
+function changeToColGrid(){
+    var pinItems = document.getElementsByClassName('pin-item');
+    for (i = 0; i < pinItems.length; i++) {
+        pinItems[i].classList.remove('col-lg-6');
+        pinItems[i].classList.remove('col-md-6');
+        pinItems[i].classList.remove('col-sm-6');
+        pinItems[i].classList.remove('col-xs-6');
+        pinItems[i].classList.remove('pin-item-line-grid');
+        pinItems[i].className += ' col-lg-3' + ' col-md-3' + ' col-sm-3' + ' col-xs-3';
+    };
+    isLine = false;
+    changeGrid = document.getElementById('change-grid');
+    changeGrid.removeEventListener('click', changeToColGrid);
+    changeGrid.addEventListener('click',
+        changeToLineGrid);
+};
+var changeGrid = document.getElementById('change-grid');
+changeGrid.addEventListener('click',
+    changeToLineGrid);
+
 
 saveAddPin.addEventListener('click', function(){
     var newPinItem = document.createElement('div');
-    newPinItem.className = 'pin-item'  +' col-lg-3' + ' col-md-3' + ' col-sm-3' + ' col-xs-3';
+    if (isLine){
+        newPinItem.className = 'pin-item' + ' col-lg-6' + ' col-md-6' + ' col-sm-6' + ' col-xs-6' + ' pin-item-line-grid';
+
+    }else {
+        newPinItem.className = 'pin-item' + ' col-lg-3' + ' col-md-3' + ' col-sm-3' + ' col-xs-3';
+    }
     newPinItem.setAttribute('data-toggle', 'modal');
     newPinItem.setAttribute('data-target', '#showPinModal');
     savedPinsRow.appendChild(newPinItem);
@@ -101,13 +146,19 @@ saveAddPin.addEventListener('click', function(){
                 selectedPin.classList.remove('selected');
             });
             deletePinBtn.addEventListener('click', function(){
-                var selectedPin = document.getElementsByClassName('selected')[0]
+                var selectedPin = document.getElementsByClassName('selected')[0];
                 selectedPin.remove();
                 deletePinBtn.setAttribute('data-dismiss', 'modal');
              });
         });
     };
 });
+
+
+
+
+
+
 
 
 
