@@ -41,6 +41,8 @@ var updatePinBtn = document.getElementById('update-pin');
 var deletePinBtn = document.getElementById('delete-pin');
 var closePinBtn = document.getElementById('close-pin');
 var isLine = false;
+var isDefaultColor = true;
+var newPinColor = 0;
 
 function changeToLineGrid() {
     var pinItems = document.getElementsByClassName('pin-item');
@@ -84,10 +86,16 @@ saveAddPin.addEventListener('click', function(){
     var newPinItem = document.createElement('div');
     if (isLine){
         newPinItem.className = 'pin-item' + ' col-lg-6' + ' col-md-6' + ' col-sm-6' + ' col-xs-6' + ' pin-item-line-grid';
-
     }else {
         newPinItem.className = 'pin-item' + ' col-lg-3' + ' col-md-3' + ' col-sm-3' + ' col-xs-3';
     }
+
+    if(!isDefaultColor){
+        newPinItem.style.backgroundImage = 'none';
+        newPinItem.style.backgroundColor = newPinColor;
+
+    }
+
     newPinItem.setAttribute('data-toggle', 'modal');
     newPinItem.setAttribute('data-target', '#showPinModal');
     savedPinsRow.appendChild(newPinItem);
@@ -155,6 +163,7 @@ saveAddPin.addEventListener('click', function(){
 });
 var boardColor = document.getElementById('board-color');
 var saveColorsBtn = document.getElementById('save-colors-btn');
+var pinColor = document.getElementById('pin-color');
 
 boardColor.addEventListener('input', function(){
     var boardColorValue = this.value;
@@ -164,7 +173,19 @@ boardColor.addEventListener('input', function(){
         document.body.style.backgroundColor = boardColorValue;
     });
 });
-
+pinColor.addEventListener('input', function(){
+    var pinColorValue = this.value;
+    newPinColor = pinColorValue;
+    isDefaultColor = false;
+    saveColorsBtn.addEventListener('click', function(){
+       settings.style.display = 'none';
+        var pinItems = document.getElementsByClassName('pin-item');
+        for (i = 0; i < pinItems.length; i++){
+            pinItems[i].style.backgroundImage = 'none';
+            pinItems[i].style.backgroundColor = pinColorValue;
+        }
+    });
+});
 
 
 
