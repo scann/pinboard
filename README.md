@@ -1,4 +1,4 @@
-# pinboard
+# Pinboard
 Pinboard - a service for creating notes for your tasks.
 Using Pinboard you can:
 - create personal notes;
