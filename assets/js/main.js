@@ -25,7 +25,6 @@ addPin.addEventListener('click', function(){
 function reformatDate(dateStr)
 {
     return dateStr.split(".").reverse().join("-");
-
 }
 
 var saveAddPin = document.getElementById('save-add-pin');
