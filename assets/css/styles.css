@@ -1,13 +1,13 @@
 @font-face {
 	font-family: "Toms Handwritten";
+	font-style: normal;
+	font-weight: normal;
 	src: url('fonts/toms_handwritten.eot');
 	src: local('☺'), url('../fonts/toms_handwritten.eot?#iefix') format('embedded-opentype'), 
 					 url('../fonts/toms_handwritten.woff') format('woff'),
 					 url('../fonts/toms_handwritten.woff2') format('woff2'), 
 					 url('../fonts/toms_handwritten.ttf') format('truetype'),
 					 url('../fonts/toms_handwritten.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
 }
 *{
 	box-sizing: border-box;
@@ -16,29 +16,29 @@ html, body {
 	height: 100%;
 }
 html {
-	font-size: 10px;
 	font-family: sans-serif;
+	font-size: 10px;
 	min-height: 100%;
 }
 body {
+	background: url("../imgmin/bg.jpg");
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-	font-weight: 300;
 	font-size: 15px;
+	font-weight: 300;
 	line-height: 1.42857143;
-	background: url("../images/bg.jpg");
 }
 .wrapper {
-	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -40px;
+	min-height: 100%;
 }
 .push {
 	height: 40px;
 }
 .content-wrapper {
-	width: 100%;
 	margin: 0 auto;
+	width: 100%;
 }
 .content-wrapper, .footer-container{
 	min-width: 320px;
@@ -50,57 +50,57 @@ body {
 	line-height: 40px;
 }
 .navbar {
-	font-size: 21px;
-	min-height: 45px;
-	margin-bottom: 0;
-	padding-top: 6px;
-	border-radius: 0;
-	position: relative;
 	background-color: rgba(26, 26, 26, 0.95);
 	border-bottom: 3px solid #6DB81C;
+	border-radius: 0;
+	font-size: 21px;
+	margin-bottom: 0;
+	min-height: 45px;
+	padding-top: 6px;
+	position: relative;
 }
 .nav {
-	padding-left: 0;
 	margin-bottom: 0;
+	padding-left: 0;
 }
 .nav-pills {
 	float: right;
 }
 .nav>li>a {
-	padding: 7px 15px;
 	color: #FA961E;
 	font-size: 16px;
 	line-height: 1.6;
+	padding: 7px 15px;
 }
 .pinboard-title {
-	background: url("../images/logo.png");
-	width: 116px;
-	height: 118px;
-	transform: scale(0.3);
+	background: url("../imgmin/logo.png");
 	float: left;
-	margin-top: -3.5%;
+	height: 118px;
 	margin-bottom: -3%;
+	margin-top: -3.5%;
+	transform: scale(0.3);
+	width: 116px;
 }
 .navbar-left-title a, .navbar-left-title a:hover,
 .navbar-left-title a:visited, .navbar-left-title a:focus {
+	color: #FA961E;
 	display: inline-block;
 	float: left;
-	color: #FA961E;
-	text-decoration: none;
 	font-family: "Toms Handwritten",Helvetica,Arial,sans-serif;
 	font-size: 150%;
 	letter-spacing: 3px;
 	line-height: 1.5;
+	text-decoration: none;
 }
 .navbar-right {
 	color: rgba(255, 255, 255, 0.75);
-	padding-right: 10px;
 	min-width: 600px;
+	padding-right: 10px;
 }
 .text {
+	color: rgba(255, 255, 255, 1);
 	font-family: "Toms Handwritten",Helvetica,Arial,sans-serif;
 	letter-spacing: 5px;
-	color: rgba(255, 255, 255, 1);
 	text-shadow: -2px -2px 0 hsl(20, 91%, 57%),
              	-3px -3px 1px hsl(20, 91%, 57%);
 }
@@ -133,19 +133,19 @@ body {
 	margin-right: 10%;
 }
 .buttons-main-content a{
-	color: #ffffff;
-	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
-	border-radius: 20px 0px 20px 0px;
+	border: 3px solid #ffffff;
 	-moz-border-radius: 20px 0px 20px 0px;
 	-webkit-border-radius: 20px 0px 20px 0px;
-	border: 3px solid #ffffff;
-	font-weight: bold;
+	border-radius: 20px 0px 20px 0px;
+	color: #ffffff;
+	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
 	font-size: 1.5em;
-	padding: 2% 8% 1% 8%;
+	font-weight: bold;
 	letter-spacing: 4px;
+	outline: none;
+	padding: 2% 8% 1% 8%;
 	text-decoration: none;
 	transition: background-color .3s linear;
-	outline: none;
 }
 .buttons-main-content a:hover {
 	background: #6DB81C;
@@ -153,14 +153,14 @@ body {
 	text-decoration: none;
 }
 .letter-right {
-	background: url("../images/letter.png") no-repeat;
-	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
-	transform: rotate(2deg);
+	background: url("../imgmin/letter.png") no-repeat;
 	float: right;
-	width: 87%;
+	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
+	letter-spacing: 2px;
 	margin-top: 5%;
 	padding: 6% 4%;
-	letter-spacing: 2px;
+	transform: rotate(2deg);
+	width: 87%;
 }
 .letter-right h3 {
 	font-size: 3.5em;
@@ -176,9 +176,9 @@ body {
 }
 /*Modals at welcome screen*/
 .modal-body-center {
-	width: 90%;
 	display: inline-block;
   	vertical-align: middle;
+	width: 90%;
 }
 .input-block {
 	display: block;
@@ -186,16 +186,16 @@ body {
 	width: 65%;
 }
 input[type="text"], input[type="password"], input[type="email"] {
-	min-height: 35px;
-	padding: 7px 8px;
-	font-size: 13px;
-	color: #333;
-	vertical-align: middle;
-	border-radius: 3px;
 	background: #fff;
 	border: 1px solid #ccc;
-	outline: none;
+	border-radius: 3px;
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+	color: #333;
+	font-size: 13px;
+	min-height: 35px;
+	outline: none;
+	padding: 7px 8px;
+	vertical-align: middle;
 }
 input[type="text"]:focus, input[type="password"]:focus, 
 input[type="email"]:focus, input[type="date"]:focus,
@@ -212,8 +212,8 @@ label[for="pin-message-field"], label[for="pin-creation-field"],
 label[for="pin-due-date"] 
 {
 	display: block;
-	text-align: left;
 	margin-bottom: 0;
+	text-align: left;
 }
 .btn {
 	padding: 6px 18px;
@@ -221,12 +221,12 @@ label[for="pin-due-date"]
 .btn-success {
 	margin-right: 5%;
 }
-#sign {
+.btn-sign {
+    margin-bottom: 4%;
 	margin-right: 0%;
     margin-top: 4%;
-    margin-bottom: 4%;
 }
-#registerUser {
+.btn-register-user {
 	margin-bottom: 5%;
 	margin-right: 0%;
 }
@@ -234,25 +234,25 @@ label[for="pin-due-date"]
 	float: none;
 }
 .add-pin-block {
-	width: 90%;
 	margin: 2% auto;
+	width: 90%;
 }
 .btn-no-margin {
 	margin: 0;
 }
 .btn-add-pin {
 	background-color: #6DB81C;
-	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
-	border-radius: 20px 0px 20px 0px;
+	border: 3px solid #ffffff;
 	-moz-border-radius: 20px 0px 20px 0px;
 	-webkit-border-radius: 20px 0px 20px 0px;
-	border: 3px solid #ffffff;
-	font-weight: bold;
+	border-radius: 20px 0px 20px 0px;
+	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
 	font-size: 1.5em;
-	padding: 3% 8% 2% 8%;
+	font-weight: bold;
 	letter-spacing: 3px;
-	text-decoration: none;
 	outline: none;
+	padding: 3% 8% 2% 8%;
+	text-decoration: none;
 	transition: background-color .3s linear;
 }
 .btn-add-pin img {
@@ -260,85 +260,89 @@ label[for="pin-due-date"]
 }
 .btn-add-pin, .btn-add-pin:focus, .btn-add-pin:hover,
 .btn-add-pin:visited {
-	display: block;
     color: #ffffff;
-    text-decoration: none;
-    width: 53%;
+	display: block;
     margin: 0 auto;
     outline: none;
+    text-decoration: none;
+    width: 53%;
 }
 .btn-add-pin:hover {
 	background-color: #5ea018;
 }
 
-#settings-block {
-	display: none;
+.settings{
 	background-color: rgba(0, 0, 0, 0.4);
-	width: 28%;
-    margin: 1% auto;
     border-radius: 7px;
-    padding-top: 0.1%;
+	display: none;
+    margin: 1% auto;
     padding-bottom: 0.1%;
+    padding-top: 0.1%;
+	width: 28%;
 }
 
-#settings-block .row {
-	margin-top: 2%;
+.settings .row {
 	margin-bottom: 2%;
+	margin-top: 2%;
 }
-#settings-block span {
-	padding: 1% 4% 2% 4%;
+.settings span {
 	color: #ffffff;
 	font-size: 1.2em;
+	padding: 1% 4% 2% 4%;
 }
 .btn-save-settings {
 	margin: 0% 2% 0% 2%;
 }
-#close-settings-dialog {
+.close {
+	left: -2%;
 	position: relative;
 	top: 1%;
-	left: -2%;
 }
 .date-block {
-	width: 100%;
 	margin-bottom: 15%;
+	width: 100%;
 }
 .creation-date-block {
-	width: 50%;
 	float: left;
+	width: 50%;
 }
 .due-date-block {
-	width: 50%;
 	float: right;
+	width: 50%;
 }
 .theme-block {
 	float: left;
-	width: 77%;
 	margin-bottom: 1%;
+	width: 77%;
 }
 .message-block{
-	width: 80%;
-	margin-top: 10%;
 	margin-bottom: 4%;
+	margin-top: 10%;
+	width: 80%;
 }
 .pin-handwritten{
-	font-family: "Toms Handwritten", Helvetica,Arial,sans-serif;
+	font-family: "Toms Handwritten", Helvetica, Arial, sans-serif;
 }
 
-#pin-message-field, #editpin-message-field{
+textarea.pin-message-field, 
+textarea.editpin-message-field{
+	height: 155px;
 	resize: none;
 	width: 125%;
-	height: 155px;
 }
-#pin-theme-field, #editpin-theme-field {
-	width: 95%;
+input[type="text"].pin-theme-field,
+input[type="text"].editpin-theme-field {
 	font-size: 20px;
 	letter-spacing: 2px;
+	width: 95%;
 }
-#pin-creation-field, #pin-due-date,
-#editpin-creation-field, #editpin-due-date {
-	height: 40px;
+input[type="text"].pin-creation-field, 
+.pin-due-date,
+.editpin-creation-field, 
+.editpin-due-date {
 	border-radius: 3px;
 	font-size: 20px;
+	height: 40px;
 	letter-spacing: 2px;
 	padding-left: 3%;
 }
@@ -351,8 +355,8 @@ label[for="pin-due-date"]
 	letter-spacing: 2px;
 }
 label[for="pin-message-field"]{
-	padding-top: 4%;
 	float: left;
+	padding-top: 4%;
 }
 .form-control{
 	font-size: 20px;
@@ -362,33 +366,33 @@ label[for="pin-message-field"]{
 	letter-spacing: 2px;
 }
 .pin-item {
-	background: url("../images/paper.jpg");
-	margin: 2% 4%;
+	background: url("../imgmin/paper.jpg");
 	-webkit-box-shadow: 0px 0px 11px 1px rgba(50, 50, 50, 0.82);
 	-moz-box-shadow:    0px 0px 11px 1px rgba(50, 50, 50, 0.82);
 	box-shadow:         0px 0px 11px 1px rgba(50, 50, 50, 0.82);
+	margin: 2% 4%;
 }
 .pin-item-line-grid {
-	margin: 4% auto;
-	padding-top: 0.5%;
-	padding-bottom: 0.5%;
 	float: none;
+	margin: 4% auto;
+	padding-bottom: 0.5%;
+	padding-top: 0.5%;
 }
 .pin-item-theme {
 	font-size: 170%;
-	margin-top: 3%;
 	letter-spacing: 2px;
+	margin-top: 3%;
 	word-wrap: break-word;
 }
 .pin-item-date, .pin-item-due-date {
 	font-size: 150%;
-	margin-top: 4%;
 	letter-spacing: 2px;
+	margin-top: 4%;
 }
 .pin-item-message {
 	font-size: 120%;
-	margin-bottom: 3%;
 	letter-spacing: 1px;
+	margin-bottom: 3%;
 	word-wrap: break-word;
 }
 /*Media queries*/
@@ -418,7 +422,7 @@ label[for="pin-message-field"]{
 	.btn-add-pin:visited {
 		width: 80%;
 	}
-	#settings-block {
+	.settings {
 		width: 38%;
 	}
 }
@@ -450,7 +454,7 @@ label[for="pin-message-field"]{
 	.nav>li>a {
     line-height: 2.1;
 	}
-	#settings-block {
+	.settings {
 		width: 51%;
 	}
 }
@@ -477,14 +481,14 @@ label[for="pin-message-field"]{
 	.btn-add-pin:visited {
 		width: 96%;
 	}
-	#settings-block {
+	.settings {
 		width: 68%;
 	}
 }
 @media (max-width: 767px) and (min-width: 481px) {
     body {
-    padding-right: 0px;
     padding-left: 0px;
+    padding-right: 0px;
     }
     .footer{
     padding-left: 20px;
@@ -522,10 +526,10 @@ label[for="pin-message-field"]{
 	.btn-add-pin:visited {
 		width: 50%;
 	}
-	#settings-block {
+	.settings {
 		width: 91%;
 	}
-	#settings-block span {
+	.settings span {
 		font-size: 1em;
 	}
 }
@@ -557,8 +561,8 @@ label[for="pin-message-field"]{
     font-size: 1.4em;
     }
     .pinboard-title {
-    margin-top: -5.5%;
     margin-bottom: -5%;
+    margin-top: -5.5%;
     }
     .buttons-main-content a:last-of-type {
     float: right;
@@ -575,10 +579,10 @@ label[for="pin-message-field"]{
 	.nav-pills {
 		margin-top: 3%;
 	}
-	#settings-block {
+	.settings {
 		width: 91%;
 	}
-	#settings-block span {
+	.settings span {
 		font-size: 1em;
 	}
 }

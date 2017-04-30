@@ -4,26 +4,13 @@ module.exports = function(grunt) {
             processors: [
                 require('pixrem')(), // add fallbacks for rem units
                 require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-                require('cssnano')(),
-                require('postcss-sorting')({ "sort-order": "alphabetical" })
+                require('cssnano')()
             ],
             dist: {
                 src: 'assets/css/*.css'
             }
         },
         concat: {
-            js: {
-                options: {
-                    stripBanners: 'block',
-                    separator: ';\n'
-                },
-                 src: ['assets/js/jquery.fancybox.js',
-                       'assets/js/jquery.fancybox-buttons.js',
-                       'assets/js/fancybox.js',
-                       'assets/js/calendar.js',
-                       'assets/js/menu.js'],
-                 dest: 'assets/js/build.js'
-            },
             css: {
                 src: [ 'assets/css/*.css' ],
                 dest: 'assets/cssmin/style.css'
@@ -47,8 +34,8 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'assets/img',
-                    src: ['**/*.{png,jpg,gif}'],
+                    cwd: 'assets/images',
+                    src: ['**/*.{png,jpg}'],
                     dest: 'assets/imgmin/'
                 }]
             }
@@ -59,7 +46,7 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'assets/jsmin/build.min.js': ['assets/js/build.js']
+                    'assets/js/build.js': ['assets/js/main.js']
                 }
             }
         },
@@ -79,7 +66,7 @@ module.exports = function(grunt) {
                 }
             },
             img: {
-                files: ['assets/img/*.*'],
+                files: ['assets/images/*.*'],
                 tasks: ['imagemin'],
                 options: {
                     livereload: true
